@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 public class Tagger implements ModInitializer {
     public static final Tag<Block> FIRE = TagRegistry.block(new Identifier("tagger", "fire"));
     public static final Tag<Block> EXTINGUISHES_LIKE_FIRE = TagRegistry.block(new Identifier("tagger", "extinguishes_like_fire"));
-    public static final Tag<Block> CAN_SUPPORT_TORCHES = TagRegistry.block(new Identifier("tagger", "can_supports_torches"));
+    public static final Tag<Block> CAN_SUPPORT_TORCHES = TagRegistry.block(new Identifier("tagger", "can_support_torches"));
     public static final Tag<Item> SEEDS = TagRegistry.item(new Identifier("tagger", "seeds"));
 
     @Override
