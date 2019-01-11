@@ -1,0 +1,15 @@
+{
+  "id": "tagger",
+  "name": "Tagger",
+  "description": "Adds some tags.",
+  "version": "0.1.0",
+  "side": "universal",
+  "initializer": "juuxel.tagger.Tagger",
+  "requires": {
+    "fabric": "*"
+  },
+  "mixins": {
+    "client": "tagger.client.json",
+    "common": "tagger.common.json"
+  }
+}

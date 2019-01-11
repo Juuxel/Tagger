@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "juuxel.tagger.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "TagEntryMixin",
+    "TagEntrySerializerMixin",
+    "TorchMixin",
+    "WorldMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
