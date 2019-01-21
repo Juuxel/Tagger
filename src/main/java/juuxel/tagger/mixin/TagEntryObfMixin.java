@@ -19,10 +19,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.function.Consumer;
 
+// fixme pls
 @Pseudo
-@Mixin(targets = "net.minecraft.world.loot.entry.TagEntry")
-public class TagEntryMixin implements TagEntryExtensions {
-    @Shadow @Final private Tag<Item> name;
+@Mixin(targets = "net.minecraft.class_91", remap = false)
+public class TagEntryObfMixin implements TagEntryExtensions {
+    @Shadow @Final private Tag<Item> field_1005;
     private boolean random = false;
 
     @Override
@@ -35,10 +36,10 @@ public class TagEntryMixin implements TagEntryExtensions {
         this.random = random;
     }
 
-    @Inject(method = "drop", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "method_433", at = @At("HEAD"), cancellable = true)
     private void onDrop(Consumer<ItemStack> consumer, LootContext context, CallbackInfo info) {
         if (random) {
-            consumer.accept(new ItemStack(name.getRandom(context.getRandom())));
+            consumer.accept(new ItemStack(field_1005.getRandom(context.getRandom())));
             info.cancel();
         }
     }

@@ -23,11 +23,6 @@ public class Tagger implements ModInitializer {
     public static final Tag<Block> EXTINGUISHES_LIKE_FIRE = TagRegistry.block(new Identifier("tagger", "extinguishes_like_fire"));
 
     /**
-     * Torches can be placed on top.
-     */
-    public static final Tag<Block> CAN_SUPPORT_TORCHES = TagRegistry.block(new Identifier("tagger", "can_support_torches"));
-
-    /**
      * Drops from grass like wheat seeds in vanilla.
      */
     public static final Tag<Item> SEEDS = TagRegistry.item(new Identifier("tagger", "seeds"));
